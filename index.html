@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sorvetes Bêjo | Sorvetes, Açaí e Milk-shakes</title>
-  <meta name="description" content="Sorvetes Bêjo: cardápio digital com sorvetes, açaí, milk-shakes e pedidos pelo WhatsApp." />
+  <title>Sorvetes Bêjo | Sorvetes</title>
+  <meta name="description" content="Sorvetes Bêjo: cardápio digital com sorvetes, pedidos pelo WhatsApp." />
   <meta property="og:title" content="Sorvetes Bêjo" />
   <meta property="og:description" content="Cardápio digital, sabores especiais e pedidos pelo WhatsApp." />
   <meta property="og:type" content="website" />
@@ -149,7 +149,8 @@ button, input, textarea, select {
 
 .nav {
   display: flex;
-  align-items: center;
+  align-items: ce
+  nter;
   gap: 22px;
   font-weight: 900;
   color: var(--brown);
@@ -1215,7 +1216,7 @@ h1, h2, h3 {
       <a href="#localizacao">Localização</a>
     </nav>
 
-    <a class="header-whats" href="https://wa.me/5516999999999?text=Olá! Vim pelo site da Sorvetes Bêjo e quero fazer um pedido.">Pedir agora</a>
+    <a class="header-whats" href="https://wa.me/5516994298842?text=Olá! Vim pelo site da Sorvetes Bêjo e quero fazer um pedido.">Pedir agora</a>
 
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
       <span></span><span></span><span></span>
@@ -1226,7 +1227,7 @@ h1, h2, h3 {
     <section class="hero">
       <div class="hero__bg"></div>
       <div class="hero__content reveal">
-        <span class="eyebrow">Sorvetes • Açaí • Milk-shakes</span>
+        <span class="eyebrow">Sorvetes •</span>
         <h1>Um sabor de <span>felicidade</span> em cada colherada.</h1>
         <p>
           Monte seu pedido pelo cardápio digital, escolha seus sabores favoritos e chame a Sorvetes Bêjo direto no WhatsApp.
@@ -1234,7 +1235,7 @@ h1, h2, h3 {
 
         <div class="hero__actions">
           <a href="#cardapio" class="btn btn-primary">Ver cardápio</a>
-          <a href="https://wa.me/5516999999999?text=Olá! Quero ver os sabores disponíveis da Sorvetes Bêjo." class="btn btn-secondary">Chamar no WhatsApp</a>
+          <a href="https://wa.me/5516994298842?text=Olá! Quero ver os sabores disponíveis da Sorvetes Bêjo." class="btn btn-secondary">Chamar no WhatsApp</a>
         </div>
 
         <div class="hero__stats">
@@ -1698,7 +1699,7 @@ sendOrder?.addEventListener("click", () => {
   const total = cartState.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const message = `Olá! Vim pelo site da Sorvetes Bêjo e quero fazer este pedido:%0A%0A${lines.join("%0A")}%0A%0ATotal estimado: ${formatCurrency(total)}%0A%0APode confirmar disponibilidade, forma de pagamento e retirada/entrega?`;
-  window.open(`https://wa.me/5516999999999?text=${message}`, "_blank");
+  window.open(`https://wa.me/5516994298842?text=${message}`, "_blank");
 });
 
 function openProductModal(productId) {
