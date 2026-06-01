@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sorvetes Bêjo | Sorvetes</title>
-  <meta name="description" content="Sorvetes Bêjo: cardápio digital com sorvetes, pedidos pelo WhatsApp." />
-  <meta property="og:title" content="Sorvetes Bêjo" />
-  <meta property="og:description" content="Cardápio digital, sabores especiais e pedidos pelo WhatsApp." />
+  <title>Sorvetes Bêjo | Sorvetes de Massa e Picolés — São Carlos/SP</title>
+  <meta name="description" content="Sorvetes Bêjo: sorvetes de massa e picolés artesanais em São Carlos/SP. Cardápio digital, pedidos pelo WhatsApp. Terça a domingo das 09h às 22h." />
+  <meta property="og:title" content="Sorvetes Bêjo — São Carlos/SP" />
+  <meta property="og:description" content="O sabor que São Carlos ama há décadas. Sorvetes de massa, picolés e açaí. Cardápio digital e pedido pelo WhatsApp." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,20 +14,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
 :root {
-  --pink: #ff5f9e;
-  --pink-2: #ff2e83;
-  --cream: #fff5e8;
-  --yellow: #ffd166;
-  --brown: #3a1f18;
-  --purple: #6c4df6;
-  --blue: #53c7f0;
+  /* BÊJO brand colors — azul marinho + vermelho da logo + branco */
+  --pink: #2fa8e0;
+  --pink-2: #0b5fa8;
+  --cream: #f0f7ff;
+  --yellow: #ffc62b;
+  --brown: #082d5c;
+  --purple: #0b5fa8;
+  --blue: #2fa8e0;
   --green: #25d366;
-  --text: #2c1f26;
-  --muted: #76636d;
+  --text: #051d3e;
+  --muted: #4a6b8a;
   --white: #ffffff;
-  --line: rgba(58, 31, 24, .12);
-  --shadow: 0 24px 70px rgba(58,31,24,.18);
+  --line: rgba(8, 45, 92, .12);
+  --shadow: 0 24px 70px rgba(8,45,92,.15);
   --radius: 28px;
+  /* Bêjo brand extras */
+  --navy: #082d5c;
+  --sky: #2fa8e0;
+  --ice: #e8f4fd;
+  --gold: #ffc62b;
+  --red: #c8102e;      /* vermelho da logo */
+  --red-light: #f5e6e9;
 }
 
 * {
@@ -41,8 +49,8 @@ html { scroll-behavior: smooth; }
 body {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(255, 95, 158, .22), transparent 32%),
-    radial-gradient(circle at top right, rgba(83, 199, 240, .22), transparent 30%),
+    radial-gradient(circle at top left, rgba(47, 168, 224, .15), transparent 36%),
+    radial-gradient(circle at bottom right, rgba(11, 95, 168, .10), transparent 32%),
     var(--cream);
   color: var(--text);
   overflow-x: hidden;
@@ -70,7 +78,7 @@ button, input, textarea, select {
   place-items: center;
   align-content: center;
   gap: 18px;
-  background: linear-gradient(135deg, var(--pink), var(--purple));
+  background: linear-gradient(135deg, var(--navy), var(--red));
   color: var(--white);
   transition: .55s ease;
 }
@@ -104,7 +112,7 @@ button, input, textarea, select {
   display: block;
   width: 100%;
   height: 100%;
-  background: var(--yellow);
+  background: var(--gold);
   animation: loading 1s ease forwards;
 }
 
@@ -123,9 +131,16 @@ button, input, textarea, select {
   justify-content: space-between;
   gap: 22px;
   padding: 14px clamp(18px, 5vw, 70px);
-  background: rgba(255, 245, 232, .78);
+  background: rgba(240, 247, 255, .88);
   backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(255,255,255,.72);
+  border-bottom: 2px solid rgba(47, 168, 224, .22);
+}
+
+.brand-logo {
+  height: 52px;
+  width: auto;
+  border-radius: 10px;
+  display: block;
 }
 
 .brand {
@@ -135,7 +150,7 @@ button, input, textarea, select {
 
 .brand span {
   font-size: 2.1rem;
-  color: var(--pink-2);
+  color: var(--navy);
   letter-spacing: -.04em;
 }
 
@@ -161,14 +176,14 @@ button, input, textarea, select {
 }
 
 .nav a:hover {
-  color: var(--pink-2);
+  color: var(--sky);
 }
 
 .nav-admin {
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(255, 95, 158, .12);
-  color: var(--pink-2) !important;
+  background: rgba(47, 168, 224, .12);
+  color: var(--sky) !important;
 }
 
 .header-whats,
@@ -225,8 +240,8 @@ button, input, textarea, select {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(255,245,232,.96), rgba(255,245,232,.82) 45%, rgba(255,245,232,.25)),
-    url("https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+    linear-gradient(90deg, rgba(240,247,255,.97), rgba(240,247,255,.84) 45%, rgba(240,247,255,.22)),
+    url("https://images.unsplash.com/photo-1488900128323-21503983a07e?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
   z-index: -2;
 }
 
@@ -238,7 +253,7 @@ button, input, textarea, select {
   right: -120px;
   top: 120px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,95,158,.32), transparent 68%);
+  background: radial-gradient(circle, rgba(47,168,224,.24), transparent 68%);
   z-index: -1;
 }
 
@@ -248,7 +263,7 @@ button, input, textarea, select {
 .location span,
 .admin-intro span {
   display: inline-flex;
-  color: var(--pink-2);
+  color: var(--sky);
   font-weight: 1000;
   text-transform: uppercase;
   letter-spacing: .14em;
@@ -268,7 +283,7 @@ h1, h2, h3 {
 }
 
 .hero h1 span {
-  color: var(--pink-2);
+  color: var(--sky);
 }
 
 .hero p {
@@ -293,9 +308,9 @@ h1, h2, h3 {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--pink), var(--pink-2));
+  background: linear-gradient(135deg, #e8142f, var(--red));
   color: var(--white);
-  box-shadow: 0 18px 46px rgba(255,46,131,.25);
+  box-shadow: 0 18px 46px rgba(200,16,46,.30);
 }
 
 .btn-secondary {
@@ -334,7 +349,7 @@ h1, h2, h3 {
 .hero__stats strong {
   display: block;
   font-size: 1.1rem;
-  color: var(--pink-2);
+  color: var(--navy);
 }
 
 .hero__stats small {
@@ -363,7 +378,7 @@ h1, h2, h3 {
 }
 
 .hero__card span {
-  color: var(--pink-2);
+  color: var(--sky);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: .12em;
@@ -425,7 +440,7 @@ h1, h2, h3 {
 }
 
 .step b {
-  color: var(--pink-2);
+  color: var(--sky);
   font-size: 1.8rem;
 }
 
@@ -460,7 +475,7 @@ h1, h2, h3 {
 
 .filter.active,
 .filter:hover {
-  background: var(--pink-2);
+  background: var(--red);
   color: var(--white);
 }
 
@@ -484,7 +499,7 @@ h1, h2, h3 {
 
 .product-card__body span,
 .modal__body span {
-  color: var(--pink-2);
+  color: var(--sky);
   font-size: .72rem;
   text-transform: uppercase;
   font-weight: 1000;
@@ -525,7 +540,7 @@ h1, h2, h3 {
 }
 
 .btn-mini--primary {
-  background: var(--pink-2);
+  background: var(--red);
   color: var(--white);
 }
 
@@ -546,7 +561,7 @@ h1, h2, h3 {
   grid-template-columns: .9fr 1.1fr;
   gap: 28px;
   align-items: center;
-  background: linear-gradient(135deg, rgba(255,95,158,.10), rgba(83,199,240,.12));
+  background: linear-gradient(135deg, rgba(47,168,224,.08), rgba(11,95,168,.12));
 }
 
 .business__grid {
@@ -580,7 +595,7 @@ h1, h2, h3 {
 .location a,
 .footer a {
   padding: 0 24px;
-  background: var(--brown);
+  background: var(--red);
   color: var(--white);
 }
 
@@ -596,7 +611,7 @@ h1, h2, h3 {
 .footer strong {
   font-family: Fredoka, Inter, sans-serif;
   font-size: 1.7rem;
-  color: var(--pink-2);
+  color: var(--navy);
 }
 
 .footer p {
@@ -611,18 +626,18 @@ h1, h2, h3 {
   bottom: 20px;
   border: 0;
   border-radius: 999px;
-  background: var(--pink-2);
+  background: var(--red);
   color: var(--white);
   min-width: 72px;
   height: 56px;
   font-weight: 900;
-  box-shadow: 0 18px 46px rgba(255,46,131,.28);
+  box-shadow: 0 18px 46px rgba(200,16,46,.35);
   cursor: pointer;
 }
 
 .cart-float span {
-  background: var(--yellow);
-  color: var(--brown);
+  background: var(--gold);
+  color: var(--navy);
   border-radius: 999px;
   padding: 2px 7px;
 }
@@ -635,7 +650,7 @@ h1, h2, h3 {
   width: min(440px, 100%);
   height: 100svh;
   background: var(--cream);
-  box-shadow: -20px 0 70px rgba(0,0,0,.18);
+  box-shadow: -20px 0 70px rgba(8,45,92,.16);
   transform: translateX(105%);
   transition: .35s ease;
   display: grid;
@@ -660,7 +675,7 @@ h1, h2, h3 {
 }
 
 .cart__header span {
-  color: var(--pink-2);
+  color: var(--navy);
   font-weight: 900;
 }
 
@@ -724,8 +739,8 @@ h1, h2, h3 {
 
 .qty .remove {
   padding: 0 8px;
-  background: rgba(255,95,158,.12);
-  color: var(--pink-2);
+  background: rgba(47,168,224,.12);
+  color: var(--sky);
 }
 
 .cart__total {
@@ -922,8 +937,8 @@ h1, h2, h3 {
 
 .admin-product button {
   border: 0;
-  background: rgba(255,95,158,.14);
-  color: var(--pink-2);
+  background: rgba(47,168,224,.14);
+  color: var(--sky);
   font-weight: 900;
   border-radius: 12px;
   padding: 10px 12px;
@@ -990,7 +1005,7 @@ h1, h2, h3 {
 
   .hero__bg {
     background:
-      linear-gradient(180deg, rgba(255,245,232,.96), rgba(255,245,232,.90) 45%, rgba(255,245,232,.78)),
+      linear-gradient(180deg, rgba(240,247,255,.97), rgba(240,247,255,.92) 45%, rgba(240,247,255,.80)),
       url("https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
   }
 
@@ -1067,8 +1082,8 @@ h1, h2, h3 {
   inset: 0;
   z-index: 9999;
   background:
-    radial-gradient(circle at top left, rgba(255, 95, 158, .26), transparent 32%),
-    radial-gradient(circle at bottom right, rgba(108, 77, 246, .24), transparent 32%),
+    radial-gradient(circle at top left, rgba(47, 168, 224, .22), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(11, 95, 168, .20), transparent 32%),
     var(--cream);
   display: grid;
   place-items: center;
@@ -1184,8 +1199,8 @@ h1, h2, h3 {
 .admin-product span, .admin-product small { display: block; color: var(--muted); margin-top: 3px; }
 .admin-product button {
   border: 0;
-  background: rgba(255,95,158,.14);
-  color: var(--pink-2);
+  background: rgba(47,168,224,.14);
+  color: var(--sky);
   font-weight: 900;
   border-radius: 12px;
   padding: 10px 12px;
@@ -1198,15 +1213,14 @@ h1, h2, h3 {
 </head>
 <body>
   <div class="splash" id="splash">
-    <div class="splash__logo">Bêjo</div>
+    <div class="splash__logo"><img src="data:image/jpeg;base64,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" alt="Bêjo" style="height:100px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.3);"></div>
     <p>Preparando seu cardápio...</p>
     <div class="splash__bar"><span></span></div>
   </div>
 
   <header class="header">
     <a href="#inicio" class="brand" aria-label="Sorvetes Bêjo">
-      <span>Bêjo</span>
-      <small>Sorvetes & Açaí</small>
+      <img src="data:image/jpeg;base64,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" alt="Sorvetes Bêjo" class="brand-logo">
     </a>
 
     <nav class="nav" id="nav">
@@ -1227,10 +1241,10 @@ h1, h2, h3 {
     <section class="hero">
       <div class="hero__bg"></div>
       <div class="hero__content reveal">
-        <span class="eyebrow">Sorvetes •</span>
-        <h1>Um sabor de <span>felicidade</span> em cada colherada.</h1>
+        <span class="eyebrow">Sorvetes de Massa e Picolés •</span>
+        <h1>O sabor que São Carlos <span>ama</span> há décadas.</h1>
         <p>
-          Monte seu pedido pelo cardápio digital, escolha seus sabores favoritos e chame a Sorvetes Bêjo direto no WhatsApp.
+          Sorvetes artesanais feitos com a melhor matéria-prima. Escolha seus favoritos, monte seu pedido e chame a Bêjo direto no WhatsApp.
         </p>
 
         <div class="hero__actions">
@@ -1239,14 +1253,14 @@ h1, h2, h3 {
         </div>
 
         <div class="hero__stats">
-          <div><strong>+20</strong><small>opções no cardápio</small></div>
+          <div><strong>+12 mil</strong><small>seguidores no Instagram</small></div>
+          <div><strong>Ter–Dom</strong><small>09h às 22h</small></div>
           <div><strong>WhatsApp</strong><small>pedido rápido</small></div>
-          <div><strong>Mobile</strong><small>feito para celular</small></div>
         </div>
       </div>
 
       <div class="hero__card reveal">
-        <img src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?auto=format&fit=crop&w=900&q=80" alt="Sorvete especial da Sorvetes Bêjo">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80" alt="Sorvete especial da Sorvetes Bêjo">
         <div>
           <span>Mais pedido</span>
           <h3>Taça Bêjo Especial</h3>
@@ -1284,7 +1298,7 @@ h1, h2, h3 {
       <div class="section-title reveal">
         <span>Cardápio digital</span>
         <h2>Escolha seu sabor favorito.</h2>
-        <p>Produtos demonstrativos. Na versão final entram fotos, sabores e preços oficiais da Sorvetes Bêjo.</p>
+        <p>Sorvetes de massa, picolés, açaí e combos. Na versão final entram fotos, sabores e preços atualizados pela Sorvetes Bêjo.</p>
       </div>
 
       <div class="filters reveal" id="filters">
@@ -1304,19 +1318,19 @@ h1, h2, h3 {
         <h2>Visual doce, moderno e vendável.</h2>
       </div>
       <div class="gallery-grid">
-        <img class="reveal" src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=900&q=80" alt="Sorvete colorido">
-        <img class="reveal" src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=900&q=80" alt="Casquinha de sorvete">
-        <img class="reveal" src="https://images.unsplash.com/photo-1488900128323-21503983a07e?auto=format&fit=crop&w=900&q=80" alt="Sobremesa gelada">
-        <img class="reveal" src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80" alt="Sorvete com cobertura">
+        <img class="reveal" src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=900&q=80" alt="Casquinha de sorvete colorida">
+        <img class="reveal" src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=900&q=80" alt="Picolés artesanais coloridos">
+        <img class="reveal" src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=900&q=80" alt="Açaí com frutas e granola">
+        <img class="reveal" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80" alt="Sorvete de chocolate">
       </div>
     </section>
 
     <section class="section business">
       <div class="business__content reveal">
-        <span>Para a empresa</span>
-        <h2>Mais que um site: uma ferramenta de atendimento.</h2>
+        <span>Para a Sorvetes Bêjo</span>
+        <h2>Mais que um site: uma vitrine para São Carlos.</h2>
         <p>
-          A proposta é reduzir perguntas repetidas, apresentar o cardápio com mais clareza e fazer o cliente chegar no WhatsApp já sabendo o que quer pedir.
+          Reduz perguntas repetidas, apresenta o cardápio com clareza e faz o cliente chegar no WhatsApp já sabendo o que quer pedir — como deve ser numa sorveteria que preza pelo atendimento.
         </p>
       </div>
       <div class="business__grid">
@@ -1330,9 +1344,11 @@ h1, h2, h3 {
       <div class="reveal">
         <span>Localização</span>
         <h2>Sorvetes Bêjo</h2>
-        <p>Endereço oficial entra aqui na versão final.</p>
+        <p>Rua Francisco Marigo, 339 — Jardim Cruzeiro do Sul, São Carlos/SP<br>
+        ☎️ (16) 3375-4067 / 3375-3609<br>
+        🕟 Terça a domingo, das 09h às 22h</p>
       </div>
-      <a href="https://www.google.com/maps" target="_blank" rel="noopener">Abrir rota</a>
+      <a href="https://www.google.com/maps/search/Rua+Francisco+Marigo+339+Jardim+Cruzeiro+do+Sul+São+Carlos" target="_blank" rel="noopener">Abrir rota</a>
     </section>
   </main>
 
@@ -1378,7 +1394,7 @@ h1, h2, h3 {
   <section class="admin-overlay" id="adminOverlay">
     <div class="admin-lock" id="adminLock">
       <div class="admin-lock__box">
-        <a href="#" class="brand"><span>Bêjo</span><small>Painel oculto</small></a>
+        <a href="#" class="brand"><img src="data:image/jpeg;base64,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" alt="Sorvetes Bêjo" class="brand-logo"></a>
         <h2>Área administrativa</h2>
         <p>Digite a senha para acessar o painel demonstrativo.</p>
         <form id="adminLogin">
@@ -1391,7 +1407,7 @@ h1, h2, h3 {
 
     <div class="admin-dashboard" id="adminDashboard">
       <div class="admin-top">
-        <a href="#" class="brand"><span>Bêjo</span><small>Admin demonstrativo</small></a>
+        <a href="#" class="brand"><img src="data:image/jpeg;base64,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" alt="Sorvetes Bêjo" class="brand-logo"></a>
         <button class="btn btn-secondary" id="closeAdmin">Fechar painel</button>
       </div>
       <div class="admin-grid">
@@ -1422,7 +1438,7 @@ h1, h2, h3 {
 
   <footer class="footer">
     <div>
-      <strong>Sorvetes Bêjo</strong>
+      <strong><img src="data:image/jpeg;base64,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" alt="Sorvetes Bêjo" style="height:48px;vertical-align:middle;margin-right:8px;border-radius:8px;"> Sorvetes Bêjo</strong>
       <p>Site demonstrativo criado para apresentar uma solução vendável de cardápio digital.</p>
     </div>
   </footer>
@@ -1431,34 +1447,52 @@ const DEMO_PRODUCTS = [
   {
     id: "sorvete-morango",
     name: "Sorvete de Morango",
-    description: "Sorvete cremoso com sabor de morango, ideal para quem ama uma opção clássica e refrescante.",
+    description: "Sorvete cremoso de morango, clássico e refrescante. Feito com a melhor matéria-prima.",
     category: "sorvetes",
     price: 9.90,
     available: true,
-    image: "https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?auto=format&fit=crop&w=900&q=80"
+    image: "https://images.unsplash.com/photo-1488900128323-21503983a07e?auto=format&fit=crop&w=900&q=80"
   },
   {
     id: "sorvete-chocolate",
     name: "Chocolate Cremoso",
-    description: "Chocolate intenso, textura cremosa e finalização perfeita para matar a vontade de doce.",
+    description: "Chocolate intenso e cremoso, perfeito para quem ama um sorvete encorpado.",
     category: "sorvetes",
     price: 10.90,
     available: true,
-    image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80"
+    image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80"
   },
   {
     id: "casquinha-dupla",
     name: "Casquinha Dupla",
-    description: "Duas bolas de sorvete na casquinha, com opção de calda e cobertura.",
+    description: "Duas bolas do sabor que você escolher na casquinha crocante, com ou sem cobertura.",
     category: "sorvetes",
     price: 12.90,
     available: true,
     image: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=900&q=80"
   },
   {
+    id: "sorvete-limao",
+    name: "Sorvete de Limão",
+    description: "Sorvete cítrico e refrescante de limão, leve e perfeito para o calor de São Carlos.",
+    category: "sorvetes",
+    price: 9.90,
+    available: true,
+    image: "https://images.unsplash.com/photo-1532634922-8fe0b757fb13?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    id: "picole-frutas",
+    name: "Picolé de Frutas",
+    description: "Picolés artesanais nos sabores da estação: morango, manga, maracujá e mais.",
+    category: "sorvetes",
+    price: 6.90,
+    available: true,
+    image: "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=900&q=80"
+  },
+  {
     id: "acai-500",
     name: "Açaí 500ml",
-    description: "Açaí cremoso com acompanhamentos. Ideal para refrescar e dar energia.",
+    description: "Açaí cremoso e encorpado. Escolha seus acompanhamentos: granola, leite em pó, frutas.",
     category: "acai",
     price: 18.90,
     available: true,
@@ -1467,16 +1501,25 @@ const DEMO_PRODUCTS = [
   {
     id: "acai-especial",
     name: "Açaí Especial Bêjo",
-    description: "Açaí com frutas, leite em pó, granola e cobertura especial.",
+    description: "Açaí com banana, granola crocante, leite em pó e calda de chocolate. O favorito da casa.",
     category: "acai",
     price: 24.90,
     available: true,
-    image: "https://images.unsplash.com/photo-1579954115563-e72bf1381629?auto=format&fit=crop&w=900&q=80"
+    image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80"
   },
   {
-    id: "milkshake-oreo",
-    name: "Milk-shake Oreo",
-    description: "Milk-shake cremoso com pedaços de Oreo e cobertura especial.",
+    id: "acai-700",
+    name: "Açaí 700ml",
+    description: "Para quem quer mais! Açaí grande com dois acompanhamentos à escolha.",
+    category: "acai",
+    price: 26.90,
+    available: true,
+    image: "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    id: "milkshake-chocolate",
+    name: "Milk-shake Chocolate",
+    description: "Milk-shake cremoso de chocolate com chantilly. Espesso e irresistível.",
     category: "milkshake",
     price: 19.90,
     available: true,
@@ -1485,20 +1528,38 @@ const DEMO_PRODUCTS = [
   {
     id: "milkshake-morango",
     name: "Milk-shake Morango",
-    description: "Milk-shake refrescante de morango, finalizado com calda e chantilly.",
+    description: "Milk-shake rosado de morango fresco, com chantilly e calda.",
     category: "milkshake",
     price: 18.90,
     available: true,
     image: "https://images.unsplash.com/photo-1541658016709-82535e94bc69?auto=format&fit=crop&w=900&q=80"
   },
   {
+    id: "milkshake-baunilha",
+    name: "Milk-shake Baunilha",
+    description: "Clássico e suave. Milk-shake de baunilha com chantilly e granulado.",
+    category: "milkshake",
+    price: 18.90,
+    available: true,
+    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80"
+  },
+  {
     id: "combo-familia",
     name: "Combo Família",
-    description: "Opção perfeita para dividir: potes, coberturas e acompanhamentos.",
+    description: "Perfeito para compartilhar: 4 sorvetes de massa + 2 coberturas à escolha.",
     category: "combos",
     price: 49.90,
     available: true,
     image: "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    id: "combo-casal",
+    name: "Combo Casal",
+    description: "2 sorvetes de massa + 2 picolés + 1 cobertura especial. Ideal para curtir a dois.",
+    category: "combos",
+    price: 34.90,
+    available: true,
+    image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80"
   }
 ];
 
